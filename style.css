@@ -352,11 +352,13 @@ img {
 }
 
 .social-icons {
+  display: flex;
+  justify-content: center;
   padding-top: 3em;
 }
 
 .social-icons a {
-  margin: 0 2em;
+  margin: 1rem 2rem;
   transition: all 0.3 ease;
 }
 
@@ -367,7 +369,6 @@ img {
 .social-icons i {
   color: #ffffff;
   font-size: 2.5rem;
-  margin-right: 0.25em;
   transition: all 0.3s ease;
 }
 
@@ -407,7 +408,8 @@ img {
     width: 100%;
   }
   .social-icons a {
-    margin: 1em;
+    padding: 0;
+    margin: 1rem;
   }
   .social-icons i {
     font-size: 1.75rem;
