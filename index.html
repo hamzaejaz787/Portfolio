@@ -13,55 +13,65 @@
       src="https://kit.fontawesome.com/183f66aaf1.js"
       crossorigin="anonymous"
     ></script>
+    <script src="./script.js" defer></script>
     <title>Portfolio</title>
   </head>
   <body>
     <!--  INTRO   -->
     <section class="intro" id="Home">
       <nav class="nav-bar">
+        <div class="logo">
+          <a href="#Home"><h1>H</h1></a>
+        </div>
         <ul class="nav-items">
           <li><a href="#Home" class="nav-item">Home</a></li>
-          <li><a href="#Projects" class="nav-item">Projects</a></li>
+          <li><a href="#Portfolio" class="nav-item">Portfolio</a></li>
           <li><a href="#Contact" class="nav-item">Contact</a></li>
         </ul>
+        <div class="burger">
+          <div class="line-one"></div>
+          <div class="line-two"></div>
+          <div class="line-three"></div>
+        </div>
       </nav>
       <div class="intro-titles">
-        <h1 class="name-title">Hey, I'm Hamza</h1>
-        <p class="subtitle">Nice to meet you</p>
-        <button class="project-btn">
-          <a href="#Projects">Check out my projects</a>
-        </button>
+        <div class="intro-hero">
+          <h1 class="name-title">Hi all, I'm Hamza!!</h1>
+          <p class="subtitle">Frontend Web Developer</p>
+          <button class="intro-btn">
+            <a href="#Contact">Contact Me</a>
+          </button>
+        </div>
+        <div class="intro-hero-img">
+          <img src="./Images/undraw_feeling_proud_qne1.svg" alt="" />
+        </div>
       </div>
     </section>
 
     <!--  PROJECTS   -->
-    <section class="projects" id="Projects">
+    <section class="projects" id="Portfolio">
       <div class="text-container">
-        <h1 class="project-title">My Projects</h1>
+        <h1 class="project-title">My Portfolio</h1>
         <p class="project-description">
-          See code and live version of the projects
+          Take a look at what I've been working on!
         </p>
       </div>
       <div class="cards">
         <div class="card">
-          <img
-            class="card-image"
-            src="./Images/pricing-component-with-toggle.jpg"
-            alt="pricing component with toggle"
-          />
+          <img class="card-image" src="./Images/loop-studios-landing.png" />
           <div class="info">
-            <h3 class="title">Pricing Component Toggle</h3>
+            <h3 class="title">Loopstudios Landing Page</h3>
             <div class="icon-container">
               <a
-                target="_blank"
                 class="icons code"
-                href="https://github.com/hamzaejaz787/Pricing-component-with-toggle"
+                target="_blank"
+                href="https://github.com/hamzaejaz787/Loopstudios-landing-page"
                 ><i class="fas fa-code"></i
               ></a>
               <a
                 target="_blank"
                 class="icons live"
-                href="https://reverent-raman-184b4b.netlify.app"
+                href="https://loopstudios-landingpage.netlify.app/"
                 ><i class="fas fa-eye"></i
               ></a>
             </div>
@@ -87,6 +97,31 @@
                 target="_blank"
                 class="icons live"
                 href="https://fylo-webpage.netlify.app"
+                ><i class="fas fa-eye"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img
+            class="card-image"
+            src="./Images/pricing-component-with-toggle.jpg"
+            alt="pricing component with toggle"
+          />
+          <div class="info">
+            <h3 class="title">Pricing Component Toggle</h3>
+            <div class="icon-container">
+              <a
+                target="_blank"
+                class="icons code"
+                href="https://github.com/hamzaejaz787/Pricing-component-with-toggle"
+                ><i class="fas fa-code"></i
+              ></a>
+              <a
+                target="_blank"
+                class="icons live"
+                href="https://reverent-raman-184b4b.netlify.app"
                 ><i class="fas fa-eye"></i
               ></a>
             </div>
@@ -167,50 +202,28 @@
             </div>
           </div>
         </div>
-
-        <div class="card">
-          <img class="card-image" src="./Images/desktop-preview.jpg " />
-          <div class="info">
-            <h3 class="title">Profile Card Component Main</h3>
-            <div class="icon-container">
-              <a
-                class="icons code"
-                target="_blank"
-                href="https://github.com/hamzaejaz787/Profile-card-component-main"
-                ><i class="fas fa-code"></i
-              ></a>
-              <a
-                target="_blank"
-                class="icons live"
-                href="https://friendly-yonath-f24fb1.netlify.app/"
-                ><i class="fas fa-eye"></i
-              ></a>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
 
     <!--  CONTACT   -->
     <section class="contact" id="Contact">
-      <h1 class="contact-title">Contact</h1>
+      <h1 class="contact-title">Reach out to me!</h1>
       <p class="contact-text">
-        Want to get in touch? <br />Feel free to connect with me here:
+        Discuss a project or just want to say Hi? My inbox is open for all.
       </p>
+
       <div class="social-icons">
         <a href="https://github.com/hamzaejaz787"
-          ><i class="fab fa-github"></i>Github</a
-        >
+          ><i class="fab fa-github"></i
+        ></a>
         <a href="https://www.linkedin.com/in/hamza-ejaz-78b979186/"
-          ><i class="fab fa-linkedin"></i>LinkedIn</a
-        >
-        <a href="mailto: hejaz389@gmail.com"
-          ><i class="far fa-envelope"></i>Email</a
-        >
+          ><i class="fab fa-linkedin"></i
+        ></a>
         <a
           href="https://www.youtube.com/channel/UCtYLeQ4z4p5ppctDHFqzEzg?view_as=subscriber"
-          ><i class="fab fa-youtube"></i>Youtube</a
-        >
+          ><i class="fab fa-youtube"></i
+        ></a>
+        <a href="mailto:hejaz389@gmail.com"><i class="fas fa-envelope"></i></a>
       </div>
     </section>
   </body>
