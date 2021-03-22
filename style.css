@@ -14,6 +14,29 @@ body {
   overflow-x: hidden;
 }
 
+.to-top {
+  display: none;
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+  font-size: 1rem;
+  padding: 1rem;
+  background-color: rgba(51, 51, 51, 0.4);
+  color: #fff;
+  border: 2px solid transparent;
+  z-index: 99;
+  border-radius: 100px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  outline: none;
+}
+
+.to-top:hover {
+  background-color: rgb(250, 250, 250);
+  color: #00071c;
+  border-color: transparent;
+}
+
 img {
   width: 100%;
   object-fit: cover;
@@ -327,6 +350,7 @@ img {
     transform: scale(1);
   }
 }
+
 /*  CONTACT   */
 
 .contact {
