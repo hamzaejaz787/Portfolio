@@ -18,3 +18,31 @@
   text-decoration: underline;
   text-underline-offset: 0.75rem;
 }
+
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    height: 40vh;
+    min-width: 185px;
+    justify-content: space-between;
+    position: absolute;
+    text-align: right;
+    top: 0;
+    right: 0;
+    border-radius: 4px;
+    background: #2f2e34;
+  }
+
+  .nav-link:hover {
+    text-decoration: none;
+    background-color: #1f1e22;
+  }
+  .nav-link {
+    display: block;
+    padding: 1rem;
+  }
+  .nav-links li {
+    margin: 0;
+    width: 100%;
+  }
+}
