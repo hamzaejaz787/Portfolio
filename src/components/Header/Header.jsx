@@ -1,8 +1,10 @@
 import { useState } from "react";
 import Headroom from "react-headroom";
+import Navbar from "../Navbar/Navbar";
+
 import logo from "../../assets/logo.svg";
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
-import Navbar from "../Navbar/Navbar";
+
 import "./header.css";
 
 const Header = () => {
@@ -35,11 +37,7 @@ const Header = () => {
               onClick={() => setToggleMenu(true)}
             />
           )}
-          {toggleMenu && (
-            <div className="scale-up-center">
-              <Navbar />
-            </div>
-          )}
+          {toggleMenu && <Navbar />}
         </div>
       </header>
     </Headroom>

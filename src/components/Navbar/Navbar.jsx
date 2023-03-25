@@ -3,7 +3,7 @@ import "./navbar.css";
 const Navbar = () => {
   return (
     <>
-      <ul className="nav-links">
+      <ul className="nav-links scale-up-center">
         <li>
           <a href="#skills" className="nav-link">
             Skills
