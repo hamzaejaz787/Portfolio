@@ -26,9 +26,9 @@
   }
 }
 
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 500px) {
   .header {
-    padding: 1em;
+    padding: 1.5em;
   }
 }
 

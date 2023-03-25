@@ -6,7 +6,7 @@ const Intro = () => {
     <>
       <section className="intro">
         <div className="intro__wrapper-text">
-          <h1>Hi, I'm Hamza👋</h1>
+          <h1>Hi, I'm Hamza 👋</h1>
           <small>Full Stack Developer</small>
 
           <p>
