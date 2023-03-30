@@ -1,5 +1,6 @@
-import Header from "../components/Header/Header";
-import Intro from "../components/Intro/Intro";
+import Header from "./Header/Header";
+import Intro from "./Intro/Intro";
+import Skills from "./Skills/Skills";
 import "./main.css";
 
 const Main = () => {
@@ -7,6 +8,7 @@ const Main = () => {
     <>
       <Header />
       <Intro />
+      <Skills />
     </>
   );
 };

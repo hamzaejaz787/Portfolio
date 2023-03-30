@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Headroom from "react-headroom";
-import Navbar from "../Navbar/Navbar";
+import Navbar from "../../components/Navbar/Navbar";
 
 import logo from "../../assets/logo.svg";
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
