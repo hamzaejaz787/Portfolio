@@ -8,9 +8,10 @@ const IntroSection = () => {
       </h1>
 
       <p className="text-lg max-w-4xl text-center md:text-left">
-        Hi, I'm Hamza. A passionate Software Developer having an experience of
-        building Web and Mobile applications with React / NextJS / TailwindCSS /
-        Strapi / Firebase / Nodejs and some other cool libraries and frameworks.
+        Hi, I'm Hamza, a passionate Software Developer specializing in crafting
+        captivating web applications. With expertise in React, Next.js,
+        TailwindCSS, Strapi, Firebase, Node.js, and cutting-edge libraries, I
+        bring your digital visions to life with innovation and finesse.
       </p>
       <div className="flex items-center flex-wrap gap-4 w-full max-w-sm md:max-w-fit pt-4 mx-auto md:mx-0">
         <Button

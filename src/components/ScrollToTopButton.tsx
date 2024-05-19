@@ -45,7 +45,7 @@ export function ScrollToTopButton() {
 
   return (
     <motion.button
-      className="fixed z-50 bottom-4 right-4 p-4 bg-primary-foreground/20 border-primary dark:border-white border dark:hover:bg-primary text-primary dark:border-primary hover:text-primary-foreground dark:hover:text-slate-800 hover:bg-primary transition-all duration-300 rounded-full"
+      className="fixed z-50 bottom-4 right-4 p-4 bg-primary-foreground/20 border-primary border dark:hover:bg-primary text-primary dark:border-primary hover:text-primary-foreground dark:hover:text-slate-800 hover:bg-primary transition-all duration-300 rounded-full"
       variants={ScrollToTopContainerVariants}
       initial="hide"
       animate={controls}
