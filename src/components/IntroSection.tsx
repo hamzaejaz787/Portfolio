@@ -26,7 +26,7 @@ const IntroSection = () => {
           variant="link"
         >
           <a
-            href="https://drive.google.com/file/d/1cUCoB99ePLIStHqRgU0k1PyFMT6WZBEL/view?usp=sharing"
+            href="https://drive.google.com/file/d/1bEf7RXttL9iIvfs_GPUX7Mz72X8yZtLw/view?usp=sharing"
             target="_blank"
           >
             Download Resume
