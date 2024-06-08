@@ -1,46 +1,103 @@
 import { FaGithub, FaLinkedin, FaUpwork } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
+import { splitStringToRegex } from "@/utils/SplitStringToRegex";
+import { motion } from "framer-motion";
+
+const heading = "Reach out to me!";
+const description =
+  "Discuss A Project Or Just Want To Say Hi? My Inbox Is Open For All.";
+
+const animationVariants = {
+  hidden: { opacity: 0 },
+  reveal: { opacity: 1 },
+};
+
+const staggerItem = {
+  hidden: { opacity: 0, y: 20 },
+  show: { opacity: 1, y: 0 },
+};
 
 const GetInTouch = () => {
+  const headingCharacters = splitStringToRegex(heading);
+  const descriptionCharacters = splitStringToRegex(description);
   return (
     <footer
       id="contact"
-      className="h-screen container px-6 sm:px-16 lg:px-20 py-10 md:pt-20 md:pb-8 space-y-4 content-center"
+      className="h-screen container px-8 md:px-0 space-y-4 content-center"
     >
-      <h2 className="text-5xl sm:text-6xl font-medium capitalize text-primary text-center">
-        Reach out to me!
-      </h2>
+      <motion.h2
+        initial="hidden"
+        viewport={{ once: true }}
+        whileInView="reveal"
+        transition={{ staggerChildren: 0.02 }}
+        className="text-5xl sm:text-6xl font-medium capitalize text-primary text-center"
+      >
+        {headingCharacters.map((char) => (
+          <motion.span
+            key={char}
+            transition={{ duration: 0.5 }}
+            variants={animationVariants}
+          >
+            {char}
+          </motion.span>
+        ))}
+      </motion.h2>
 
-      <p className="text-lg max-w-4xl mx-auto text-center">
-        Discuss A Project Or Just Want To Say Hi? My Inbox Is Open For All.
-      </p>
+      <motion.p
+        initial="hidden"
+        viewport={{ once: true }}
+        whileInView="reveal"
+        transition={{ staggerChildren: 0.02 }}
+        className="text-lg max-w-4xl mx-auto text-center"
+      >
+        {" "}
+        {descriptionCharacters.map((char) => (
+          <motion.span
+            key={char}
+            transition={{ duration: 0.5 }}
+            variants={animationVariants}
+          >
+            {char}
+          </motion.span>
+        ))}
+      </motion.p>
 
-      <div className="flex items-center justify-center gap-8 pt-6">
-        <a
+      <motion.div
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ staggerChildren: 0.1 }}
+        className="flex items-center justify-center gap-8 pt-6"
+      >
+        <motion.a
+          variants={staggerItem}
           href="https://github.com/hamzaejaz787/"
           className="text-4xl hover:text-gray-600 transition-all duration-300"
         >
           <FaGithub />
-        </a>
-        <a
+        </motion.a>
+        <motion.a
+          variants={staggerItem}
           href="https://www.linkedin.com/in/hamza-ejaz-78b979186/"
           className="text-4xl hover:text-blue-600 transition-all duration-300"
         >
           <FaLinkedin />
-        </a>
-        <a
+        </motion.a>
+        <motion.a
+          variants={staggerItem}
           href="https://www.upwork.com/freelancers/~01bbd44cd1e1b14675"
           className="text-4xl hover:text-lime-600 transition-all duration-300"
         >
           <FaUpwork />
-        </a>
-        <a
+        </motion.a>
+        <motion.a
+          variants={staggerItem}
           href="mailto:hejaz389@gmail.com"
           className="text-4xl hover:text-slate-600 transition-all duration-300"
         >
           <MdEmail />
-        </a>
-      </div>
+        </motion.a>
+      </motion.div>
     </footer>
   );
 };

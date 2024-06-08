@@ -20,6 +20,7 @@ import {
 import { IoLogoJavascript, IoLogoFirebase } from "react-icons/io5";
 import { RiNextjsFill } from "react-icons/ri";
 import { VscVscode } from "react-icons/vsc";
+import { motion } from "framer-motion";
 import { SkillGridItemTypes } from "@/lib/types";
 
 const skillGridItem: SkillGridItemTypes[] = [
@@ -47,20 +48,32 @@ const skillGridItem: SkillGridItemTypes[] = [
   { icon: SiVite, href: "https://vitejs.dev/guide/" },
 ];
 
+const staggerItem = {
+  hidden: { opacity: 0, y: 20 },
+  show: { opacity: 1, y: 0 },
+};
+
 const SkillsGrid = () => {
   return (
-    <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 py-8">
+    <motion.ul
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ staggerChildren: 0.1 }}
+      className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 py-8"
+    >
       {skillGridItem.map((item, index) => (
-        <li
+        <motion.li
           key={index}
+          variants={staggerItem}
           className="justify-self-center text-6xl cursor-pointer transition-all duration-300 text-slate-800 dark:text-white hover:text-primary dark:hover:text-primary focus-within:text-primary dark:focus-within:text-primary"
         >
           <a href={item?.href} target="_blank">
             {<item.icon />}
           </a>
-        </li>
+        </motion.li>
       ))}
-    </ul>
+    </motion.ul>
   );
 };
 
