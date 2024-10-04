@@ -7,13 +7,14 @@ const SkillsSection = () => {
       id="skills"
     >
       <h2 className="md:inline-block text-6xl text-primary text-center md:text-left relative after:content-[''] after:absolute md:after:block after:hidden after:left-0 after:mx-auto after:bottom-0 after:w-full after:h-1 after:bg-primary after:animate-line-width">
-        My Skills & Tools
+        Skills & Tools
       </h2>
 
       <p className="text-lg max-w-4xl text-center md:text-left">
-        I'm proficient in modern frontend tech like HTML5, CSS3 & JavaScript,
-        and frameworks like TailwindCSS, Bootstrap & Next.js. I also handle
-        backend tech like Node.js, Firebase, MongoDB & SQL.
+        Skilled in modern frontend technologies such as HTML5, CSS3, and
+        JavaScript, along with frameworks like TailwindCSS, Bootstrap, and
+        Next.js. Experienced in backend technologies, including Node.js,
+        Firebase, MongoDB, and SQL.
       </p>
 
       <SkillsGrid />

@@ -3,9 +3,9 @@ import { MdEmail } from "react-icons/md";
 import { splitStringToRegex } from "@/utils/SplitStringToRegex";
 import { motion } from "framer-motion";
 
-const heading = "Reach out to me!";
+const heading = "Let's Connect!";
 const description =
-  "Discuss A Project Or Just Want To Say Hi? My Inbox Is Open For All.";
+  "Whether you want to discuss a project or just say hello, I’m always open to new opportunities and conversations. Feel free to drop me a message anytime!";
 
 const animationVariants = {
   hidden: { opacity: 0 },

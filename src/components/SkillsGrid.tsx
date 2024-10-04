@@ -7,6 +7,7 @@ import {
   FaSass,
   FaReact,
   FaWordpress,
+  FaStripe,
 } from "react-icons/fa6";
 import {
   SiTypescript,
@@ -16,10 +17,18 @@ import {
   SiShadcnui,
   SiPostgresql,
   SiVite,
+  SiMicrosoftazure,
+  SiFramer,
+  SiSupabase,
 } from "react-icons/si";
-import { IoLogoJavascript, IoLogoFirebase } from "react-icons/io5";
+import {
+  IoLogoJavascript,
+  IoLogoFirebase,
+  IoLogoVercel,
+} from "react-icons/io5";
 import { RiNextjsFill } from "react-icons/ri";
 import { VscVscode } from "react-icons/vsc";
+import { DiNpm } from "react-icons/di";
 import { motion } from "framer-motion";
 import { SkillGridItemTypes } from "@/lib/types";
 
@@ -36,16 +45,22 @@ const skillGridItem: SkillGridItemTypes[] = [
   { icon: FaNode, href: "https://nodejs.org/en" },
   { icon: SiMongodb, href: "https://www.mongodb.com/" },
   { icon: SiPostgresql, href: "https://www.postgresql.org/" },
+  { icon: SiSupabase, href: "https://supabase.com" },
+  { icon: SiMicrosoftazure, href: "https://azure.microsoft.com/en-us" },
   { icon: IoLogoFirebase, href: "https://console.firebase.google.com/" },
   { icon: SiStrapi, href: "https://docs.strapi.io/dev-docs/quick-start" },
-  { icon: FaWordpress, href: "https://wordpress.com/" },
+  { icon: SiShadcnui, href: "https://ui.shadcn.com/docs" },
   { icon: SiTailwindcss, href: "https://tailwindcss.com/docs/installation" },
   { icon: FaSass, href: "https://sass-lang.com/" },
   { icon: FaBootstrap, href: "https://getbootstrap.com/" },
-  { icon: SiShadcnui, href: "https://ui.shadcn.com/docs" },
   { icon: FaFigma, href: "https://www.figma.com/" },
+  { icon: FaWordpress, href: "https://wordpress.com/" },
   { icon: VscVscode, href: "https://code.visualstudio.com/" },
   { icon: SiVite, href: "https://vitejs.dev/guide/" },
+  { icon: IoLogoVercel, href: "https://vercel.com" },
+  { icon: DiNpm, href: "https://www.npmjs.com/" },
+  { icon: FaStripe, href: "https://stripe.com/" },
+  { icon: SiFramer, href: "https://www.framer.com/motion/" },
 ];
 
 const staggerItem = {

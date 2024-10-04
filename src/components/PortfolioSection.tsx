@@ -7,16 +7,24 @@ import ferroThumb from "@/assets/ferro.png";
 import perryAirThumb from "@/assets/perry-aircon.png";
 import fibermaxThumb from "@/assets/fibermax-thumbnail.png";
 import ecommerceThumb from "@/assets/ecommerce-landing.jpg";
+import laptopRentalThumb from "@/assets/laptop-rental.png";
 import { Button } from "./ui/button";
 
 const PortfolioSection = () => {
   const cardsData: CardTypes[] = [
     {
+      title: "Laptop Rental Australia",
+      imageUrl: laptopRentalThumb,
+      codeUrl: "https://github.com/hamzaejaz787/laptop-rental",
+      previewUrl: "https://laptop-rental.com.au",
+      tags: ["NextJs", "TailwindCSS", "Shadcn/ui", "Framer Motion", "Strapi"],
+    },
+    {
       title: "Big0",
       imageUrl: big0Thumb,
       codeUrl: "https://github.com/hamzaejaz787/big-o",
       previewUrl: "https://big0.dev/",
-      tags: ["NextJs", "TailwindCSS", "Shadcn/ui", "Strapi"],
+      tags: ["NextJs", "TailwindCSS", "Shadcn/ui", "Strapi", "Supabase"],
     },
     {
       title: "Ferrotechincs",
@@ -40,18 +48,18 @@ const PortfolioSection = () => {
       tags: ["ReactJS", "HeadlessUI"],
     },
     {
-      title: "Ecommerce Product Page with Stripe Checkout",
-      imageUrl: ecommerceThumb,
-      codeUrl: "https://github.com/hamzaejaz787/ecommerce-product-page",
-      previewUrl: "https://ecomerce-with-stripe.netlify.app/",
-      tags: ["ReactJS", "CSS3", "Stripe", "NodeJS"],
-    },
-    {
       title: "Fibermax",
       imageUrl: fibermaxThumb,
       codeUrl: "https://github.com/hamzaejaz787/",
       previewUrl: "https://fibermax.com.pk/",
       tags: ["HTML5", "CSS3", "Javascript"],
+    },
+    {
+      title: "Ecommerce Product Page with Stripe Checkout",
+      imageUrl: ecommerceThumb,
+      codeUrl: "https://github.com/hamzaejaz787/ecommerce-product-page",
+      previewUrl: "https://ecomerce-with-stripe.netlify.app/",
+      tags: ["ReactJS", "CSS3", "Stripe", "NodeJS"],
     },
   ];
   return (
@@ -62,8 +70,8 @@ const PortfolioSection = () => {
       <h2 className="md:inline-block text-6xl text-primary text-center mx-auto relative after:content-[''] after:absolute md:after:block after:hidden after:left-0 after:mx-auto after:bottom-0 after:w-full after:h-1 after:bg-primary after:animate-line-width">
         My Portfolio
       </h2>{" "}
-      <p className="text-lg capitalize">
-        Take a look at what I've recently been working on!{" "}
+      <p className="text-lg">
+        Take a look at some of the recent projects I've been working on!{" "}
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 pb-6">
         <PortfolioCard cardsData={cardsData} />

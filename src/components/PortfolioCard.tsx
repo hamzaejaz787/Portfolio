@@ -25,11 +25,14 @@ const PortfolioCard = ({ cardsData }: { cardsData: CardTypes[] }) => {
           className="group overflow-hidden rounded-md shadow-lg dark:bg-secondary flex flex-col justify-start"
         >
           <CardHeader className="p-0 overflow-hidden min-h-[250px]">
-            <img
-              src={card.imageUrl}
-              alt={card.title}
-              className="group-hover:scale-110 lg:group-hover:rotate-2 transition-transform duration-300 h-full ease-out w-full"
-            />
+            {" "}
+            <a href={card.previewUrl}>
+              <img
+                src={card.imageUrl}
+                alt={card.title}
+                className="group-hover:scale-110 lg:group-hover:rotate-2 transition-transform duration-300 h-full ease-out w-full"
+              />
+            </a>
           </CardHeader>
 
           <CardContent className="p-4 text-left gap-4 flex flex-col justify-between h-full">
@@ -53,7 +56,7 @@ const PortfolioCard = ({ cardsData }: { cardsData: CardTypes[] }) => {
                 asChild
                 className="flex-1 min-w-min flex items-center gap-2 text-lg"
               >
-                <a href={card.previewUrl} target="_blank">
+                <a href={card.previewUrl}>
                   Live <FaRegEye />
                 </a>
               </Button>
@@ -61,7 +64,7 @@ const PortfolioCard = ({ cardsData }: { cardsData: CardTypes[] }) => {
                 asChild
                 className="flex-1 min-w-min flex items-center gap-2 text-lg"
               >
-                <a href={card.codeUrl} target="_blank">
+                <a href={card.codeUrl}>
                   Code
                   <FaCode />
                 </a>
