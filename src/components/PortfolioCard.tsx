@@ -28,6 +28,7 @@ const PortfolioCard = ({ cardsData }: { cardsData: CardTypes[] }) => {
             {" "}
             <a href={card.previewUrl}>
               <img
+                loading="lazy"
                 src={card.imageUrl}
                 alt={card.title}
                 className="group-hover:scale-110 lg:group-hover:rotate-2 transition-transform duration-300 h-full ease-out w-full"
