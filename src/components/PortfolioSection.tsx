@@ -2,11 +2,9 @@ import { CardTypes } from "@/lib/types";
 import PortfolioCard from "./PortfolioCard";
 
 import big0Thumb from "@/assets/big0.png";
-import prosilientThumb from "@/assets/prosilient.png";
 import ferroThumb from "@/assets/ferro.png";
 import perryAirThumb from "@/assets/perry-aircon.png";
 import fibermaxThumb from "@/assets/fibermax-thumbnail.png";
-import ecommerceThumb from "@/assets/ecommerce-landing.jpg";
 import laptopRentalThumb from "@/assets/laptop-rental.png";
 import { Button } from "./ui/button";
 
@@ -34,13 +32,6 @@ const PortfolioSection = () => {
       tags: ["HTML5", "CSS3", "Javascript"],
     },
     {
-      title: "Prosilient",
-      imageUrl: prosilientThumb,
-      codeUrl: "https://github.com/hamzaejaz787/",
-      previewUrl: "https://prosilient.systems/",
-      tags: ["ReactJS", "HeadlessUI", "TailwindCSS"],
-    },
-    {
       title: "Perry Air Conditioning",
       imageUrl: perryAirThumb,
       codeUrl: "https://github.com/hamzaejaz787/",
@@ -53,13 +44,6 @@ const PortfolioSection = () => {
       codeUrl: "https://github.com/hamzaejaz787/",
       previewUrl: "https://fibermax.com.pk/",
       tags: ["HTML5", "CSS3", "Javascript"],
-    },
-    {
-      title: "Ecommerce Product Page with Stripe Checkout",
-      imageUrl: ecommerceThumb,
-      codeUrl: "https://github.com/hamzaejaz787/ecommerce-product-page",
-      previewUrl: "https://ecomerce-with-stripe.netlify.app/",
-      tags: ["ReactJS", "CSS3", "Stripe", "NodeJS"],
     },
   ];
   return (
