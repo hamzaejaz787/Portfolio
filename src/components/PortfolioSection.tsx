@@ -6,6 +6,7 @@ import ferroThumb from "@/assets/ferro.png";
 import perryAirThumb from "@/assets/perry-aircon.png";
 import fibermaxThumb from "@/assets/fibermax-thumbnail.png";
 import laptopRentalThumb from "@/assets/laptop-rental.png";
+import turningPagesThumb from "@/assets/turningpages.png";
 import { Button } from "./ui/button";
 
 const PortfolioSection = () => {
@@ -30,6 +31,13 @@ const PortfolioSection = () => {
       codeUrl: "https://github.com/hamzaejaz787/",
       previewUrl: "https://www.ferrotechnics.com/",
       tags: ["HTML5", "CSS3", "Javascript"],
+    },
+    {
+      title: "Turning Pages Foundation",
+      imageUrl: turningPagesThumb,
+      codeUrl: "https://github.com/hamzaejaz787/",
+      previewUrl: "https://turningpagesfoundation.org/",
+      tags: ["Wordpress", "Elementor"],
     },
     {
       title: "Perry Air Conditioning",

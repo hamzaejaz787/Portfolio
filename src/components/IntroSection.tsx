@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 const heading = "Hi, I'm Hamza.";
 const description =
-  "A passionate Software Developer specializing in crafting captivating web applications. With expertise in React, Next.js, TailwindCSS, Strapi, Firebase, Node.js, and cutting-edge libraries, I bring your digital visions to life with innovation and finesse.";
+  "An experienced Full-Stack Developer specializing in crafting captivating web applications. With expertise in React, Next.js, TailwindCSS, Strapi, Firebase, Node.js, and cutting-edge libraries, I bring your digital visions to life with innovation and finesse.";
 
 const animationVariants = {
   hidden: { opacity: 0 },
@@ -18,9 +18,9 @@ const IntroSection = () => {
   const headingCharacters = splitStringToRegex(heading);
   const descriptionCharacters = splitStringToRegex(description);
 
-  const softwareStart = description.indexOf("Software");
+  const softwareStart = description.indexOf("Full-Stack");
   const developerStart = description.indexOf("Developer");
-  const softwareLength = "Software".length;
+  const softwareLength = "Full-Stack".length;
   const developerLength = "Developer".length;
 
   return (
