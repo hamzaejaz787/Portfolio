@@ -3,64 +3,61 @@ import {
   FaCss3Alt,
   FaBootstrap,
   FaNode,
-  FaFigma,
-  FaSass,
   FaReact,
   FaWordpress,
-  FaStripe,
 } from "react-icons/fa6";
 import {
   SiTypescript,
   SiTailwindcss,
   SiStrapi,
-  SiMongodb,
   SiShadcnui,
   SiPostgresql,
-  SiVite,
   SiMicrosoftazure,
-  SiFramer,
   SiSupabase,
+  SiPrisma,
+  SiFirebase,
 } from "react-icons/si";
-import {
-  IoLogoJavascript,
-  IoLogoFirebase,
-  IoLogoVercel,
-} from "react-icons/io5";
+import { IoLogoJavascript } from "react-icons/io5";
 import { RiNextjsFill } from "react-icons/ri";
-import { VscVscode } from "react-icons/vsc";
-import { DiNpm } from "react-icons/di";
 import { motion } from "framer-motion";
-import { SkillGridItemTypes } from "@/lib/types";
+import { ElementType } from "react";
 
-const skillGridItem: SkillGridItemTypes[] = [
+type Skill = { icon: ElementType; label: string };
+type SkillGroup = { category: string; skills: Skill[] };
+
+const skillGroups: SkillGroup[] = [
   {
-    icon: FaHtml5,
-    href: "https://developer.mozilla.org/en-US/docs/Glossary/HTML5",
+    category: "Frontend",
+    skills: [
+      { icon: FaHtml5, label: "HTML5" },
+      { icon: FaCss3Alt, label: "CSS3" },
+      { icon: IoLogoJavascript, label: "JavaScript" },
+      { icon: SiTypescript, label: "TypeScript" },
+      { icon: FaReact, label: "React" },
+      { icon: RiNextjsFill, label: "Next.js" },
+      { icon: SiTailwindcss, label: "Tailwind" },
+      { icon: SiShadcnui, label: "Shadcn/ui" },
+      { icon: FaBootstrap, label: "Bootstrap" },
+    ],
   },
-  { icon: FaCss3Alt, href: "https://www.w3schools.com/css/css_intro.asp" },
-  { icon: IoLogoJavascript, href: "https://www.javascript.com/" },
-  { icon: SiTypescript, href: "https://www.typescriptlang.org/" },
-  { icon: FaReact, href: "https://react.dev/" },
-  { icon: RiNextjsFill, href: "https://nextjs.org/" },
-  { icon: FaNode, href: "https://nodejs.org/en" },
-  { icon: SiMongodb, href: "https://www.mongodb.com/" },
-  { icon: SiPostgresql, href: "https://www.postgresql.org/" },
-  { icon: SiSupabase, href: "https://supabase.com" },
-  { icon: SiMicrosoftazure, href: "https://azure.microsoft.com/en-us" },
-  { icon: IoLogoFirebase, href: "https://console.firebase.google.com/" },
-  { icon: SiStrapi, href: "https://docs.strapi.io/dev-docs/quick-start" },
-  { icon: SiShadcnui, href: "https://ui.shadcn.com/docs" },
-  { icon: SiTailwindcss, href: "https://tailwindcss.com/docs/installation" },
-  { icon: FaSass, href: "https://sass-lang.com/" },
-  { icon: FaBootstrap, href: "https://getbootstrap.com/" },
-  { icon: FaFigma, href: "https://www.figma.com/" },
-  { icon: FaWordpress, href: "https://wordpress.com/" },
-  { icon: VscVscode, href: "https://code.visualstudio.com/" },
-  { icon: SiVite, href: "https://vitejs.dev/guide/" },
-  { icon: IoLogoVercel, href: "https://vercel.com" },
-  { icon: DiNpm, href: "https://www.npmjs.com/" },
-  { icon: FaStripe, href: "https://stripe.com/" },
-  { icon: SiFramer, href: "https://www.framer.com/motion/" },
+  {
+    category: "Backend & Database",
+    skills: [
+      { icon: FaNode, label: "Node.js" },
+      { icon: SiPostgresql, label: "PostgreSQL" },
+      { icon: SiSupabase, label: "Supabase" },
+      { icon: SiPrisma, label: "Prisma" },
+      { icon: SiStrapi, label: "Strapi" },
+      { icon: SiFirebase, label: "firebase" },
+    ],
+  },
+  {
+    category: "Platforms & Tools",
+    skills: [
+      { icon: SiMicrosoftazure, label: "Azure" },
+      { icon: FaWordpress, label: "WordPress" },
+    ],
+  },
 ];
 
 const staggerItem = {
@@ -70,25 +67,34 @@ const staggerItem = {
 
 const SkillsGrid = () => {
   return (
-    <motion.ul
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: true, amount: 0.2 }}
-      transition={{ staggerChildren: 0.1 }}
-      className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 py-8"
-    >
-      {skillGridItem.map((item, index) => (
-        <motion.li
-          key={index}
-          variants={staggerItem}
-          className="justify-self-center text-6xl cursor-pointer transition-all duration-300 text-slate-800 dark:text-white hover:text-primary dark:hover:text-primary focus-within:text-primary dark:focus-within:text-primary"
-        >
-          <a href={item?.href} target="_blank">
-            {<item.icon />}
-          </a>
-        </motion.li>
+    <div className="space-y-10">
+      {skillGroups.map((group) => (
+        <div key={group.category} className="space-y-4">
+          <h3 className="text-sm font-semibold uppercase tracking-widest text-muted-foreground">
+            {group.category}
+          </h3>
+          <motion.ul
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ staggerChildren: 0.07 }}
+            className="flex flex-wrap gap-4"
+          >
+            {group.skills.map((skill) => (
+              <motion.li
+                key={skill.label}
+                variants={staggerItem}
+                transition={{ duration: 0.3 }}
+                className="flex items-center gap-2 px-4 py-2.5 rounded-xl border border-border bg-card text-foreground hover:border-primary hover:text-primary transition-all duration-300 cursor-default"
+              >
+                <skill.icon className="text-xl" />
+                <span className="text-sm font-medium">{skill.label}</span>
+              </motion.li>
+            ))}
+          </motion.ul>
+        </div>
       ))}
-    </motion.ul>
+    </div>
   );
 };
 

@@ -57,19 +57,25 @@ const PortfolioCard = ({ cardsData }: { cardsData: CardTypes[] }) => {
                 asChild
                 className="flex-1 min-w-min flex items-center gap-2 text-lg"
               >
-                <a href={card.previewUrl}>
+                <a
+                  href={card.previewUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Live <FaRegEye />
                 </a>
               </Button>
-              <Button
-                asChild
-                className="flex-1 min-w-min flex items-center gap-2 text-lg"
-              >
-                <a href={card.codeUrl}>
-                  Code
-                  <FaCode />
-                </a>
-              </Button>
+              {card.codeUrl && (
+                <Button
+                  asChild
+                  className="flex-1 min-w-min flex items-center gap-2 text-lg"
+                >
+                  <a href={card.codeUrl}>
+                    Code
+                    <FaCode />
+                  </a>
+                </Button>
+              )}
             </div>
           </CardContent>
         </MotionCard>

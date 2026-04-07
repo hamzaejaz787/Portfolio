@@ -16,5 +16,5 @@ export interface CardTypes {
   imageUrl: string;
   tags: string[];
   previewUrl: string;
-  codeUrl: string;
+  codeUrl?: string;
 }

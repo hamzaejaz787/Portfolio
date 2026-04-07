@@ -4,6 +4,7 @@ import MobileNav from "./MobileNav";
 
 const Header = () => {
   const navItems: NavItemTypes[] = [
+    { href: "#about", title: "About" },
     { href: "#skills", title: "Skills" },
     { href: "#projects", title: "Portfolio" },
     { href: "#contact", title: "Get In Touch" },

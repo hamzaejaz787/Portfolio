@@ -1,22 +1,21 @@
 import SkillsGrid from "./SkillsGrid";
+import { motion } from "framer-motion";
 
 const SkillsSection = () => {
   return (
     <section
-      className="container px-6 sm:px-16 lg:px-20 py-10 md:py-10 md:pb-20 space-y-4"
+      className="container px-6 sm:px-16 lg:px-20 py-16 md:py-24 space-y-8"
       id="skills"
     >
-      <h2 className="md:inline-block text-6xl text-primary text-center md:text-left relative after:content-[''] after:absolute md:after:block after:hidden after:left-0 after:mx-auto after:bottom-0 after:w-full after:h-1 after:bg-primary after:animate-line-width">
+      <motion.h2
+        initial={{ opacity: 0, y: 16 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        className="text-4xl sm:text-5xl font-bold text-primary text-center md:text-left"
+      >
         Skills & Tools
-      </h2>
-
-      <p className="text-lg max-w-4xl text-center md:text-left">
-        Skilled in modern frontend technologies such as HTML5, CSS3, and
-        JavaScript, along with frameworks like TailwindCSS, Bootstrap, and
-        Next.js. Experienced in backend technologies, including Node.js,
-        Firebase, MongoDB, and SQL.
-      </p>
-
+      </motion.h2>
       <SkillsGrid />
     </section>
   );

@@ -1,27 +1,31 @@
 import { Button } from "@/components/ui/button";
-import {
-  isWithinWordRange,
-  splitStringToRegex,
-} from "@/utils/SplitStringToRegex";
+import { splitStringToRegex } from "@/utils/SplitStringToRegex";
 import { motion } from "framer-motion";
 
 const heading = "Hi, I'm Hamza.";
 const description =
-  "An experienced Full-Stack Developer specializing in crafting captivating web applications. With expertise in React, Next.js, TailwindCSS, Strapi, Firebase, Node.js, and cutting-edge libraries, I bring your digital visions to life with innovation and finesse.";
+  "Full-Stack Developer building fast, scalable web apps with Next.js, React, and modern tooling.";
 
-const animationVariants = {
+const highlightedWords = ["Next.js,", "React,", "modern", "tooling."];
+
+const charVariants = {
   hidden: { opacity: 0 },
   reveal: { opacity: 1 },
 };
 
+const wordVariants = {
+  hidden: { opacity: 0, y: 10 },
+  reveal: { opacity: 1, y: 0 },
+};
+
+const buttonVariants = {
+  hidden: { opacity: 0, y: 16 },
+  reveal: { opacity: 1, y: 0 },
+};
+
 const IntroSection = () => {
   const headingCharacters = splitStringToRegex(heading);
-  const descriptionCharacters = splitStringToRegex(description);
-
-  const softwareStart = description.indexOf("Full-Stack");
-  const developerStart = description.indexOf("Developer");
-  const softwareLength = "Full-Stack".length;
-  const developerLength = "Developer".length;
+  const words = description.split(" ");
 
   return (
     <section className="container px-6 sm:px-16 lg:px-20 py-10 md:pt-20 md:pb-8 space-y-4">
@@ -30,13 +34,13 @@ const IntroSection = () => {
         viewport={{ once: true }}
         whileInView="reveal"
         transition={{ staggerChildren: 0.02 }}
-        className="text-5xl sm:text-6xl lg:text-8xl font-bold text-primary text-center md:text-left"
+        className="text-5xl sm:text-6xl lg:text-7xl font-bold text-primary text-center md:text-left"
       >
         {headingCharacters.map((char) => (
           <motion.span
             key={char}
             transition={{ duration: 0.5 }}
-            variants={animationVariants}
+            variants={charVariants}
             className={char === "." ? "text-white" : ""}
           >
             {char}
@@ -51,51 +55,48 @@ const IntroSection = () => {
         transition={{ staggerChildren: 0.02 }}
         className="text-lg max-w-4xl text-center md:text-left"
       >
-        {descriptionCharacters.map((char, index) => {
-          const isSoftwareChar = isWithinWordRange(
-            index,
-            softwareStart,
-            softwareLength
-          );
-          const isDeveloperChar = isWithinWordRange(
-            index,
-            developerStart,
-            developerLength
-          );
-          return (
-            <motion.span
-              key={index}
-              transition={{ duration: 0.01 }}
-              variants={animationVariants}
-              className={
-                isSoftwareChar || isDeveloperChar ? "text-primary" : ""
-              }
-            >
-              {char}
-            </motion.span>
-          );
-        })}
-      </motion.p>
-      <div className="flex items-center flex-wrap gap-4 w-full max-w-sm md:max-w-fit pt-4 mx-auto md:mx-0">
-        <Button
-          asChild
-          className="flex-1 min-w-min text-lg px-8 py-6 border border-primary dark:border-white bg-primary dark:bg-white text-primary-foreground hover:bg-transparent hover:dark:bg-transparent hover:text-primary rounded-full transition-all duration-300"
-        >
-          <a href="#contact">Get In Touch</a>
-        </Button>
-        <Button
-          asChild
-          className="flex-1 min-w-min text-lg px-8 py-6"
-          variant="link"
-        >
-          <a
-            href="https://drive.google.com/file/d/1bEf7RXttL9iIvfs_GPUX7Mz72X8yZtLw/view?usp=sharing"
-            target="_blank"
+        {words.map((word, i) => (
+          <motion.span
+            key={i}
+            variants={wordVariants}
+            transition={{ duration: 0.35, ease: "easeOut" }}
+            className={
+              highlightedWords.includes(word) ? "text-primary font-medium" : ""
+            }
           >
-            Download Resume
-          </a>
-        </Button>
-      </div>
+            {word}{" "}
+          </motion.span>
+        ))}
+      </motion.p>
+
+      <motion.div
+        initial="hidden"
+        viewport={{ once: true }}
+        whileInView="reveal"
+        transition={{ staggerChildren: 0.12, delayChildren: 0.8 }}
+        className="flex items-center flex-wrap gap-4 w-full max-w-sm md:max-w-fit pt-4 mx-auto md:mx-0"
+      >
+        <motion.div variants={buttonVariants} transition={{ duration: 0.4 }}>
+          <Button
+            asChild
+            className="text-lg px-8 py-6 border border-primary dark:border-white bg-primary dark:bg-white text-primary-foreground hover:bg-transparent hover:dark:bg-transparent hover:text-primary rounded-full transition-all duration-300"
+          >
+            <a href="#contact">Get In Touch</a>
+          </Button>
+        </motion.div>
+
+        <motion.div variants={buttonVariants} transition={{ duration: 0.4 }}>
+          <Button asChild className="text-lg px-8 py-6" variant="link">
+            <a
+              href="https://drive.google.com/file/d/1DdLa_vygmeFq66J7teuL4YH3I-wyVMhr/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Download Resume
+            </a>
+          </Button>
+        </motion.div>
+      </motion.div>
     </section>
   );
 };

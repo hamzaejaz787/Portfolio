@@ -3,14 +3,28 @@ import PortfolioCard from "./PortfolioCard";
 
 import big0Thumb from "@/assets/big0.png";
 import ferroThumb from "@/assets/ferro.png";
-import perryAirThumb from "@/assets/perry-aircon.png";
 import fibermaxThumb from "@/assets/fibermax-thumbnail.png";
 import laptopRentalThumb from "@/assets/laptop-rental.png";
 import turningPagesThumb from "@/assets/turningpages.png";
+import instahireThumb from "@/assets/instahire.png";
+import perryAirconThumb from "@/assets/perry-aircon.png";
 import { Button } from "./ui/button";
 
 const PortfolioSection = () => {
   const cardsData: CardTypes[] = [
+    {
+      title: "Instahire",
+      imageUrl: instahireThumb,
+      previewUrl: "https://instahire.co.uk",
+      tags: [
+        "NextJs",
+        "TailwindCSS",
+        "Shadcn/ui",
+        "Supabase",
+        "Azure",
+        "Stripe",
+      ],
+    },
     {
       title: "Laptop Rental Australia",
       imageUrl: laptopRentalThumb,
@@ -26,30 +40,26 @@ const PortfolioSection = () => {
       tags: ["NextJs", "TailwindCSS", "Shadcn/ui", "Strapi", "Supabase"],
     },
     {
-      title: "Ferrotechincs",
+      title: "Turning Pages Foundation",
+      imageUrl: turningPagesThumb,
+      previewUrl: "https://turningpagesfoundation.org/",
+      tags: ["Wordpress", "Elementor", "Stripe"],
+    },
+    {
+      title: "Perry Aircon",
+      imageUrl: perryAirconThumb,
+      previewUrl: "https://perryair.com.au/",
+      tags: ["React.JS", "HeadlessUI", "CSS3"],
+    },
+    {
+      title: "Ferrotechnics",
       imageUrl: ferroThumb,
-      codeUrl: "https://github.com/hamzaejaz787/",
       previewUrl: "https://www.ferrotechnics.com/",
       tags: ["HTML5", "CSS3", "Javascript"],
     },
     {
-      title: "Turning Pages Foundation",
-      imageUrl: turningPagesThumb,
-      codeUrl: "https://github.com/hamzaejaz787/",
-      previewUrl: "https://turningpagesfoundation.org/",
-      tags: ["Wordpress", "Elementor"],
-    },
-    {
-      title: "Perry Air Conditioning",
-      imageUrl: perryAirThumb,
-      codeUrl: "https://github.com/hamzaejaz787/",
-      previewUrl: "https://perryair.com.au/",
-      tags: ["ReactJS", "HeadlessUI"],
-    },
-    {
       title: "Fibermax",
       imageUrl: fibermaxThumb,
-      codeUrl: "https://github.com/hamzaejaz787/",
       previewUrl: "https://fibermax.com.pk/",
       tags: ["HTML5", "CSS3", "Javascript"],
     },

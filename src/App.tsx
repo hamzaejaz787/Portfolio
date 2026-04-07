@@ -5,12 +5,14 @@ import { ScrollToTopButton } from "@/components/ScrollToTopButton";
 import SkillsSection from "@/components/SkillsSection";
 import PortfolioSection from "@/components/PortfolioSection";
 import GetInTouch from "./components/GetInTouch";
+import AboutSection from "./components/AboutSection";
 
 function App() {
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
       <Header />
       <IntroSection />
+      <AboutSection />
       <SkillsSection />
       <PortfolioSection />
       <GetInTouch />
