@@ -95,7 +95,7 @@ const AboutSection = () => {
             them.
           </motion.p>
 
-          <motion.p
+          {/* <motion.p
             variants={fadeUp}
             transition={{ duration: 0.5 }}
             className="text-lg leading-relaxed text-muted-foreground"
@@ -103,7 +103,7 @@ const AboutSection = () => {
             I'm currently open to international remote opportunities and
             relocation — particularly in Europe and Southeast Asia. If you're
             looking for a developer who ships, feel free to reach out.
-          </motion.p>
+          </motion.p> */}
 
           {/* Location + availability badge */}
           <motion.div

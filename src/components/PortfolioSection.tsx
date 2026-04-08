@@ -1,4 +1,6 @@
 import { CardTypes } from "@/lib/types";
+import { Button } from "./ui/button";
+import { motion } from "framer-motion";
 import PortfolioCard from "./PortfolioCard";
 
 import big0Thumb from "@/assets/big0.png";
@@ -8,7 +10,7 @@ import laptopRentalThumb from "@/assets/laptop-rental.png";
 import turningPagesThumb from "@/assets/turningpages.png";
 import instahireThumb from "@/assets/instahire.png";
 import perryAirconThumb from "@/assets/perry-aircon.png";
-import { Button } from "./ui/button";
+import awtThuumb from "@/assets/awt.png";
 
 const PortfolioSection = () => {
   const cardsData: CardTypes[] = [
@@ -46,16 +48,22 @@ const PortfolioSection = () => {
       tags: ["Wordpress", "Elementor", "Stripe"],
     },
     {
-      title: "Perry Aircon",
-      imageUrl: perryAirconThumb,
-      previewUrl: "https://perryair.com.au/",
-      tags: ["React.JS", "HeadlessUI", "CSS3"],
+      title: "Army Welfare Trust (AWT)",
+      imageUrl: awtThuumb,
+      previewUrl: "https://awt.com.pk/",
+      tags: ["Reactjs", "Bootstrap", "Strapi", "jQuery", "Framer Motion"],
     },
     {
       title: "Ferrotechnics",
       imageUrl: ferroThumb,
       previewUrl: "https://www.ferrotechnics.com/",
       tags: ["HTML5", "CSS3", "Javascript"],
+    },
+    {
+      title: "Perry Aircon",
+      imageUrl: perryAirconThumb,
+      previewUrl: "https://perryair.com.au/",
+      tags: ["React.JS", "HeadlessUI", "CSS3"],
     },
     {
       title: "Fibermax",
@@ -69,9 +77,15 @@ const PortfolioSection = () => {
       className="container px-6 sm:px-16 lg:px-20 py-10 md:py-10 md:pb-20 text-center content-center space-y-6"
       id="projects"
     >
-      <h2 className="md:inline-block text-6xl text-primary text-center mx-auto relative after:content-[''] after:absolute md:after:block after:hidden after:left-0 after:mx-auto after:bottom-0 after:w-full after:h-1 after:bg-primary after:animate-line-width">
+      <motion.h2
+        initial="hidden"
+        viewport={{ once: true }}
+        whileInView="reveal"
+        transition={{ staggerChildren: 0.02 }}
+        className="text-4xl sm:text-5xl font-bold text-primary text-center"
+      >
         My Portfolio
-      </h2>{" "}
+      </motion.h2>{" "}
       <p className="text-lg">
         Take a look at some of the recent projects I've been working on!{" "}
       </p>

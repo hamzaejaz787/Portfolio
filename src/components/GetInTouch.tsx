@@ -30,7 +30,7 @@ const GetInTouch = () => {
         viewport={{ once: true }}
         whileInView="reveal"
         transition={{ staggerChildren: 0.02 }}
-        className="text-5xl sm:text-6xl font-medium capitalize text-primary text-center"
+        className="text-4xl sm:text-5xl font-bold text-primary text-center"
       >
         {headingCharacters.map((char) => (
           <motion.span
