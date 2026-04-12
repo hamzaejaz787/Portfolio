@@ -42,7 +42,7 @@ const AboutSection = () => {
             About Me
           </motion.h2>
 
-          {/* Stats row */}
+          {/* Stats */}
           <motion.div
             variants={fadeUp}
             transition={{ duration: 0.5 }}
@@ -67,12 +67,9 @@ const AboutSection = () => {
           >
             I'm a self-taught Full-Stack Developer based in Islamabad, Pakistan,
             with over 4 years of experience building web applications for
-            clients across the globe. I've been freelancing since 2020 and
-            currently work as a Full-Stack Developer at{" "}
-            <span className="text-foreground font-medium">
-              One World Rental
-            </span>
-            .
+            clients across the globe. I've been freelancing since 2020, working
+            with clients ranging from small businesses to international
+            companies — turning ideas into fast, production-ready products.
           </motion.p>
 
           <motion.p
@@ -80,32 +77,26 @@ const AboutSection = () => {
             transition={{ duration: 0.5 }}
             className="text-lg leading-relaxed text-muted-foreground"
           >
-            At One World Rental, I built{" "}
-            <a
-              href="https://instahire.co.uk"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-primary font-medium hover:underline"
-            >
-              instahire.co.uk
-            </a>{" "}
-            — a B2C e-commerce platform — from the ground up using Next.js,
-            Supabase, and Azure. I enjoy working across the full stack, from
-            designing clean UIs to architecting the backend logic that powers
-            them.
+            I work across the full stack — from building clean, responsive UIs
+            to designing the backend logic and infrastructure behind them. My
+            current focus is on{" "}
+            <span className="text-foreground font-medium">Next.js</span>,{" "}
+            <span className="text-foreground font-medium">Supabase</span>, and{" "}
+            <span className="text-foreground font-medium">TypeScript</span>, and
+            I care a lot about writing code that's maintainable, not just code
+            that works.
           </motion.p>
 
-          {/* <motion.p
+          <motion.p
             variants={fadeUp}
             transition={{ duration: 0.5 }}
             className="text-lg leading-relaxed text-muted-foreground"
           >
-            I'm currently open to international remote opportunities and
-            relocation — particularly in Europe and Southeast Asia. If you're
-            looking for a developer who ships, feel free to reach out.
-          </motion.p> */}
+            Outside of work, I'm into anime, cars, pc building and I take my gym
+            sessions as seriously as my side projects.
+          </motion.p>
 
-          {/* Location + availability badge */}
+          {/* Badges */}
           <motion.div
             variants={fadeUp}
             transition={{ duration: 0.5 }}

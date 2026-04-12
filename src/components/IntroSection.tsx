@@ -86,7 +86,11 @@ const IntroSection = () => {
         </motion.div>
 
         <motion.div variants={buttonVariants} transition={{ duration: 0.4 }}>
-          <Button asChild className="text-lg px-8 py-6" variant="link">
+          <Button
+            asChild
+            className="text-lg px-8 py-6 rounded-full"
+            variant="link"
+          >
             <a
               href="https://drive.google.com/file/d/1DdLa_vygmeFq66J7teuL4YH3I-wyVMhr/view?usp=sharing"
               target="_blank"

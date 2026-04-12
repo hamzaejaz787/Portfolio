@@ -86,7 +86,7 @@ const PortfolioSection = () => {
       >
         My Portfolio
       </motion.h2>{" "}
-      <p className="text-lg">
+      <p className="text-lg text-muted-foreground">
         Take a look at some of the recent projects I've been working on!{" "}
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 pb-6">
