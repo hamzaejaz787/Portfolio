@@ -6,6 +6,7 @@ import SkillsSection from "@/components/SkillsSection";
 import PortfolioSection from "@/components/PortfolioSection";
 import GetInTouch from "./components/GetInTouch";
 import AboutSection from "./components/AboutSection";
+import Experiences from "./components/Experiences";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Header />
       <IntroSection />
       <AboutSection />
+      <Experiences />
       <SkillsSection />
       <PortfolioSection />
       <GetInTouch />

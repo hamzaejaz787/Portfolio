@@ -74,7 +74,7 @@ const IntroSection = () => {
         viewport={{ once: true }}
         whileInView="reveal"
         transition={{ staggerChildren: 0.12, delayChildren: 0.8 }}
-        className="flex items-center flex-wrap gap-4 w-full max-w-sm md:max-w-fit pt-4 mx-auto md:mx-0"
+        className="flex items-center justify-center flex-wrap sm:flex-nowrap gap-4 w-full max-w-sm md:max-w-fit pt-4 mx-auto md:mx-0"
       >
         <motion.div variants={buttonVariants} transition={{ duration: 0.4 }}>
           <Button
