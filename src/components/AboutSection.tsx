@@ -49,8 +49,8 @@ const AboutSection = () => {
             className="flex flex-wrap justify-center md:justify-start gap-8"
           >
             {[
-              { value: "4+", label: "Years Experience" },
-              { value: "20+", label: "Projects Delivered" },
+              { value: "5+", label: "Years Experience" },
+              { value: "40+", label: "Projects Delivered" },
               { value: "2020", label: "Freelancing Since" },
             ].map((stat) => (
               <div key={stat.label}>
@@ -66,7 +66,7 @@ const AboutSection = () => {
             className="text-lg leading-relaxed text-muted-foreground"
           >
             I'm a self-taught Full-Stack Developer based in Islamabad, Pakistan,
-            with over 4 years of experience building web applications for
+            with over 5 years of experience building web applications for
             clients across the globe. I've been freelancing since 2020, working
             with clients ranging from small businesses to international
             companies — turning ideas into fast, production-ready products.

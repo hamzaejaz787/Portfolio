@@ -91,11 +91,7 @@ const IntroSection = () => {
             className="text-lg px-8 py-6 rounded-full"
             variant="link"
           >
-            <a
-              href="https://drive.google.com/file/d/1DdLa_vygmeFq66J7teuL4YH3I-wyVMhr/view?usp=sharing"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="/Hamza_Ejaz_Full_Stack_Developer.pdf" download>
               Download Resume
             </a>
           </Button>

@@ -13,17 +13,7 @@ const experiences = [
       "Developed a full B2C e-commerce platform with Next.js, handling both frontend and backend development and integrating IntelliEvent for event management capabilities.",
       "Built interactive analytics dashboards with real-time data tracking, automating reporting workflows and reducing manual reporting time for stakeholders.",
       "Architected and shipped scalable web applications using Next.js, Strapi CMS, and TailwindCSS, owning the full lifecycle from design to production deployment on Microsoft Azure.",
-    ],
-  },
-  {
-    company: "Freelance",
-    role: "Full Stack Developer",
-    location: "Remote",
-    period: "Aug 2020 – Present",
-    points: [
-      "Designed and developed 10+ SaaS platforms for startups using both MERN and Next.js stacks, contributing directly to client revenue growth.",
-      "Built responsive, high-performance websites for businesses serving 500+ customers, maintaining quick load times and consistent cross-device UX.",
-      "Managed the full project lifecycle independently — from requirements and architecture to deployment on AWS (EC2, S3, Lightsail).",
+      "Leading Horizon RFID: a React Native scanner, on-prem RFID readers, a Next.js dashboard, and a Firebase backend, validating checkout/checkin against the ERP in real time.",
     ],
   },
   {
@@ -35,6 +25,17 @@ const experiences = [
       "Developed and maintained a secure, high-performance website for Ferrotechnics, collaborating directly with the client to deliver bespoke solutions on schedule.",
       "Built scalable web applications using Next.js, Strapi, and TailwindCSS, overseeing full-cycle development and seamless CMS integration.",
       "Converted Figma designs into pixel-perfect responsive websites, boosting user engagement through close collaboration with the SEO team.",
+    ],
+  },
+  {
+    company: "Freelance",
+    role: "Full Stack Developer",
+    location: "Remote",
+    period: "Aug 2020 – Dec 2023",
+    points: [
+      "Designed and developed 20+ SaaS platforms for startups using both MERN and Next.js stacks, contributing directly to client revenue growth.",
+      "Built responsive, high-performance websites for businesses serving 500+ customers, maintaining quick load times and consistent cross-device UX.",
+      "Managed the full project lifecycle independently — from requirements and architecture to deployment on AWS (EC2, S3, Lightsail).",
     ],
   },
   {
