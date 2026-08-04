@@ -11,7 +11,7 @@ const experiences = [
     period: "Aug 2024 – Present",
     points: [
       "Developed a full B2C e-commerce platform with Next.js, handling both frontend and backend development and integrating IntelliEvent for event management capabilities.",
-      "Built interactive analytics dashboards with real-time data tracking, automating reporting workflows and reducing manual reporting time for stakeholders.",
+      "Built an interactive operations dashboard with real-time data tracking and intelligent alerts, unifying visibility across 50+ country operations and eliminating missed orders that were previously falling through the cracks.",
       "Architected and shipped scalable web applications using Next.js, Strapi CMS, and TailwindCSS, owning the full lifecycle from design to production deployment on Microsoft Azure.",
       "Leading Horizon RFID: a React Native scanner, on-prem RFID readers, a Next.js dashboard, and a Firebase backend, validating checkout/checkin against the ERP in real time.",
     ],
@@ -23,6 +23,7 @@ const experiences = [
     period: "Nov 2023 – Aug 2024",
     points: [
       "Developed and maintained a secure, high-performance website for Ferrotechnics, collaborating directly with the client to deliver bespoke solutions on schedule.",
+      "Built a HIPAA-compliant healthcare document management platform in Next.js, implementing AES-256 encryption, role-based access control, and automated audit trails for regulatory compliance.",
       "Built scalable web applications using Next.js, Strapi, and TailwindCSS, overseeing full-cycle development and seamless CMS integration.",
       "Converted Figma designs into pixel-perfect responsive websites, boosting user engagement through close collaboration with the SEO team.",
     ],
@@ -31,7 +32,7 @@ const experiences = [
     company: "Freelance",
     role: "Full Stack Developer",
     location: "Remote",
-    period: "Aug 2020 – Dec 2023",
+    period: "Aug 2020 – Sept 2024",
     points: [
       "Designed and developed 20+ SaaS platforms for startups using both MERN and Next.js stacks, contributing directly to client revenue growth.",
       "Built responsive, high-performance websites for businesses serving 500+ customers, maintaining quick load times and consistent cross-device UX.",
